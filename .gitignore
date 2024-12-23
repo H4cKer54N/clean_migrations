@@ -12,7 +12,7 @@ venv/
 ENV/
 env.bak/
 env/
-
+.venv/
 # Migrations
 **/migrations/
 

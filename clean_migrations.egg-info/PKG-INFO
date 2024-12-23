@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: clean_migrations
+Version: 1.0.1
+Summary: Herramienta para limpiar migraciones en proyectos Django
+Home-page: https://github.com/h4cker54n/clean_migrations
+Author: H4cker54n
+Author-email: snbq89@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# clean_migrations
+
+`clean_migrations` es una herramienta que elimina los archivos de migraciones generados en proyectos Django, excepto el archivo `__init__.py`.
+
+### Â¿Por quÃ© usar `clean_migrations`?
+
+En proyectos Django, las migraciones pueden acumularse con el tiempo, especialmente durante el desarrollo. Este script facilita la limpieza de las migraciones de todas las aplicaciones de un proyecto de manera rÃ¡pida y sencilla.
+
+## CaracterÃ­sticas
+
+- Borra todos los archivos de migraciones (`.py`) excepto `__init__.py`.
+- Recorre automÃ¡ticamente todas las aplicaciones en tu proyecto Django.
+- FÃ¡cil de usar desde la lÃ­nea de comandos o como mÃ³dulo en tu cÃ³digo.
+
+---
+
+## InstalaciÃ³n
+Instala la herramienta directamente desde PyPI con:
+
+```bash
+pip install clean_migrations
+```
+
+## Uso
+Desde la lÃ­nea de comandos:
+- Ejecuta el siguiente comando, especificando la ruta de tu proyecto Django:
+
+```bash
+clean-migrations /ruta/a/tu/proyecto
+```
+
+- Si no se especifica la ruta, se usa el directorio actual.
+Ejemplo:
+
+```bash
+clean-migrations .
+```
+
+- Desde cÃ³digo Python TambiÃ©n puedes usar clean_migrations como mÃ³dulo en tu cÃ³digo:
+
+```python
+from clean_migrations.main import clean_migrations
+
+clean_migrations("/ruta/a/tu/proyecto")
+```
+
+# Ejemplo de Salida
+```plaintext
+Procesando migraciones para la app: myapp
+Archivo eliminado: 0001_initial.py
+Archivo eliminado: 0002_auto_20240101_1234.py
+No se encontrÃ³ carpeta de migraciones para la app: another_app
+Â¡Limpieza de archivos de migraciones completada!
+```
+## Requisitos
+- Python 3.6 o superior
+- Un proyecto Django con estructuras de carpetas estÃ¡ndar.
+
+## Contribuciones
+
+Â¡Las contribuciones son bienvenidas! Si deseas mejorar esta herramienta:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
+3. EnvÃ­a un pull request
+
+## Licencia
+Este proyecto estÃ¡ bajo la licencia MIT. Consulta el archivo LICENSE para mÃ¡s detalles.
+

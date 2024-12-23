@@ -1,0 +1,9 @@
+README.md
+setup.py
+clean_migrations/__init__.py
+clean_migrations/main.py
+clean_migrations.egg-info/PKG-INFO
+clean_migrations.egg-info/SOURCES.txt
+clean_migrations.egg-info/dependency_links.txt
+clean_migrations.egg-info/entry_points.txt
+clean_migrations.egg-info/top_level.txt
